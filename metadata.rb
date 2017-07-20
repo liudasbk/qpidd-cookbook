@@ -1,0 +1,10 @@
+name 'qpidd'
+maintainer 'Liudas Baksys'
+maintainer_email 'liudasbk@users.noreply.github.com'
+license 'MIT'
+description 'Provides a custom resources for installing instances of Apache Qpid'
+long_description 'Provides a custom resources for installing instances of Apache Qpid'
+version '0.1.0'
+chef_version '>= 12.5' if respond_to?(:chef_version)
+issues_url 'https://github.com/liudasbk/qpidd-cookbook/issues'
+source_url 'https://github.com/liudasbk/qpidd-cookbook'
