@@ -72,6 +72,12 @@ action :start do
   end
 end
 
+action :stop do
+  service qpid_name do
+    action :stop
+  end
+end
+
 action_class do
   include QpiddCookbook::Helper
 end
