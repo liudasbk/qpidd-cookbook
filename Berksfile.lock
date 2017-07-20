@@ -1,0 +1,11 @@
+DEPENDENCIES
+  qpidd
+    path: .
+    metadata: true
+  qpidd_test
+    path: test/cookbooks/qpidd_test
+
+GRAPH
+  qpidd (0.1.0)
+  qpidd_test (0.0.1)
+    qpidd (>= 0.0.0)
