@@ -1,5 +1,7 @@
 # qpidd Cookbook
 
+[![Build Status](https://travis-ci.org/liudasbk/qpidd-cookbook.svg?branch=master)](https://travis-ci.org/liudasbk/qpidd-cookbook) [![Cookbook Version](https://img.shields.io/cookbook/v/qpidd.svg)](https://supermarket.chef.io/cookbooks/qpidd)
+
 Provides a custom resources for installing instances of Apache Qpid.
 
 ## Requirements
@@ -24,6 +26,7 @@ Adds or removes an instance of Apache Qpid.
 
 - `:create` - Installs and configures an instance of Qpid.
 - `:start` - Starts an instance of Qpid.
+- `:stop` - Stops an instance of Qpid.
 - `:delete` - Removes an instance of Qpid (configuration and directories). NOT IMPLEMENTED.
 
 #### Properties
