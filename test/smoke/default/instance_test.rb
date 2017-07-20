@@ -16,15 +16,15 @@ describe service('qpidd-second') do
   it { should be_running }
 end
 
-if os[:family] == 'debian'
+if os[:family] == 'rhel' && os[:version].to_f >= 7.0
   describe port(5673) do
     it { should be_listening }
     its('processes') { should include 'qpidd' }
+    its('addresses') { should include '127.0.0.1' }
   end
 else
   describe port(5673) do
     it { should be_listening }
     its('processes') { should include 'qpidd' }
-    its('addresses') { should include '127.0.0.1' }
   end
 end
