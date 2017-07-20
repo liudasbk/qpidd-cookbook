@@ -71,7 +71,7 @@ start() {
 	    touch $pidfile
 	    chown qpidd.qpidd $pidfile
             [ -x /sbin/restorecon ] && /sbin/restorecon $pidfile
-	    runuser - -s /bin/sh qpidd -c "/usr/sbin/$prog --check > $pidfile"
+	    runuser - -s /bin/sh qpidd -c "/usr/sbin/$prog --check --config <%= @config -%> > $pidfile"
 	fi
 	return $RETVAL
 }
@@ -100,7 +100,7 @@ case "$1" in
 	$1
 	;;
   status)
-	status $prog
+	status -p $pidfile $prog
 	RETVAL=$?
 	;;
   force-reload)
